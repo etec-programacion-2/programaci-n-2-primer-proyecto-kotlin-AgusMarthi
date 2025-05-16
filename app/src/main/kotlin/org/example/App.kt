@@ -27,6 +27,10 @@ fun pv(){
     }
 }
 
+fun potencia(){
+    
+}
+
 fun maxmin(){
     val notas = listOf(8, 7, 9, 10, 5) 
     val Max = notas.max()

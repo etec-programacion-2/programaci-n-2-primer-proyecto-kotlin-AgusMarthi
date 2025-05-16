@@ -3,37 +3,14 @@
  */
 package org.example
 
-
-fun holaK() {
-    println("Hola, Kotlin")
-}
-
 fun holaA() {
     println("Agustín, 25/4/25")
-}
-
-fun Datos() {
-    val nombre: String = "Agustín"
-    val edad: Int = 16
-    val altura: Double = 1.75
-    val esEstudiante: Boolean = true
-    
-    println("Nombre: $nombre")
-    println("Edad: $edad")
-    println("Altura: $altura")
-    println("Es estudiante: $esEstudiante")
 }
 
 fun arear(base: Double, altura: Double): Double {
     return base * altura
 }
 
-fun parimpar(num: Int): String {
-    return when {
-        num % 2 == 0 -> "par"
-        else -> "impar"
-    }
-}
 fun pnc(numero: Int): String {
     return when {
         numero > 0 -> "positivo"
@@ -42,75 +19,26 @@ fun pnc(numero: Int): String {
     }
 }
 
-fun loops() {
-    println("Usando for:")
-    for (i in 1..10) {
-        println(i)
-    }
-
-    println("\nUsando while:")
-    var j = 1
-    while (j <= 10) {
-        println(j)
-        j++
-    }
-
-    println("\nUsando do-while:")
-    var k = 1
-    do {
-        println(k)
-        k++
-    } while (k <= 10)
-}
-
-fun factorial(n: Int): Int {
-    return if (n <= 1) 1 else n * factorial(n - 1)
-}
-
-fun saludar(nombre: String, edad: Int = 0) {
-    println("Hola $nombre, tienes $edad años")
-}
-
-fun DAV() {
-    val variableGlobal = "Soy global en esta función"
-    
-    if (true) {
-        val variableIf = "Soy local del if"
-        println("Dentro del if: $variableIf")
-        println("Puedo acceder a: $variableGlobal")
-    }
-    
-    for (i in 1..3) {
-        val variableFor = "Soy local del for - iteración $i"
-        println("Dentro del for: $variableFor")
-        println("Puedo acceder a: $variableGlobal")
+fun pv(){
+    for (i in 0..20){
+        if (i % 2 == 0){
+            println(i)
+        }
     }
 }
 
-fun calcularPromedio(numeros: List<Int>): Double {
-    var suma = 0  
-    var contador = 0  
-    
-    for (numero in numeros) {
-        suma += numero
-        contador++
-    }
-    
-    return if (contador > 0) suma.toDouble() / contador else 0.0
+fun maxmin(){
+    val notas = listOf(8, 7, 9, 10, 5) 
+    val Max = notas.max()
+    val Min = notas.min()
+    println("Máximo: $Max")
+    println("Mínimo: $Min")
 }
 
 fun main() {
-    val notas = listOf(8, 7, 9, 10, 5) 
-
-    holaK() 
     holaA()
-    Datos()  
     println(arear(1.5,1.0))
-    println(parimpar(3))  
-    println(pnc(-3))
-    loops()  
-    println(factorial(5)) 
-    saludar("Agustín", 16)  
-    DAV()  
-    println("Promedio de las notas: ${calcularPromedio(notas)}") 
+    println(pnc(-3)) 
+    pv()
+    maxmin()
 }

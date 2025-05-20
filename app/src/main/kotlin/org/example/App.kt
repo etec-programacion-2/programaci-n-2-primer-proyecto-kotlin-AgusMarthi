@@ -28,7 +28,9 @@ fun pv(){
 }
 
 fun potencia(){
-    
+    val base = 2
+    val exponente = 4
+    println($base ^ $exponente)
 }
 
 fun maxmin(){
@@ -44,5 +46,6 @@ fun main() {
     println(arear(1.5,1.0))
     println(pnc(-3)) 
     pv()
+    potencia()
     maxmin()
 }

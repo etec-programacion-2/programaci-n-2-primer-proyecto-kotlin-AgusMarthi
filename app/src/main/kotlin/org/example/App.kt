@@ -28,9 +28,15 @@ fun pv(){
 }
 
 fun potencia(){
-    val base = 2
-    val exponente = 4
-    println($base ^ $exponente)
+    var base = 2
+    var exponente = 4
+    var pot = 1
+    var i = 1
+    while (i <= exponente){
+        pot *= base
+        i++
+    }
+    println(pot)
 }
 
 fun maxmin(){
